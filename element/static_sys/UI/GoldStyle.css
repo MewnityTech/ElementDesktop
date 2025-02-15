@@ -1,0 +1,48 @@
+
+a {
+    background-image: var(--GOLD_GRADIENT);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+:root {
+    --ACCENT_COLOR: linear-gradient(465deg, #fab31e, #fd9347);
+    --GRADIENT_SHADOW: 0px 0px 9px -1px rgb(238 186 133 / 72%);
+
+    --REPLY_BG: linear-gradient(465deg, rgb(250, 179, 30, 40%), rgb(253, 147, 71, 40%));
+    --REPLY_SVG_COLOR: rgb(253, 147, 71, 70%);
+}
+
+/* Интерфейс */
+
+.UI-Logo {
+    background-image: url('/static_sys/Images/GoldStar.svg');
+    filter: drop-shadow(0px 0px 4px rgb(253 177 102 / 62%));
+    -webkit-background-clip: unset;
+}
+
+.UI-Window_button:hover {
+    outline: solid 2px rgb(238 186 133 / 72%);
+    outline-offset: 2px;
+}
+
+/* Пост */
+
+.AddPost .Buttons .Send {
+    background: var(--ACCENT_COLOR);
+    box-shadow: var(--GRADIENT_SHADOW);
+    -moz-box-shadow: var(--GRADIENT_SHADOW);
+    -webkit-box-shadow: var(--GRADIENT_SHADOW);
+}
+.AddPost .Buttons .Send:hover {
+    outline: solid 2px rgb(238 186 133 / 72%);
+    outline-offset: 2px;
+}
+
+.Post .InteractionButtons .Liked {
+    background: var(--ACCENT_COLOR);
+    color: #FFF;
+    box-shadow: var(--GRADIENT_SHADOW);
+    -moz-box-shadow: var(--GRADIENT_SHADOW);
+    -webkit-box-shadow: var(--GRADIENT_SHADOW);
+}

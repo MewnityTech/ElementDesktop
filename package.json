@@ -1,0 +1,37 @@
+{
+  "name": "element",
+  "version": "2.3.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-packager . --overwrite --platform=win32 --arch=x64 --out=release --icon=icon.ico",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^32.2.1",
+    "electron-builder": "^25.1.8"
+  },
+  "keywords": [],
+  "author": "Xaromie",
+  "license": "ISC",
+  "description": "",
+  "build": {
+    "appId": "com.xaromie.element",
+    "productName": "Element",
+    "files": [
+      "index.js",
+      "./assets/**/*",
+      "./element/**/*"
+    ],
+    "directories": {
+      "output": "dist",
+      "buildResources": "public"
+    },
+    "win": {
+      "icon": "./assets/icons/icon.ico"
+    }
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}

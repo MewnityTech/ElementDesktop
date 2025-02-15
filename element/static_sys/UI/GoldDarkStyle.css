@@ -1,0 +1,387 @@
+:root {
+    --ACCENT_COLOR: linear-gradient(465deg, #fab31e, #fd9347);
+
+    --BODY_COLOR: rgb(21 21 21);
+    --AIR_COLOR: rgb(43 43 43 / 85%);
+    --AIR_BLOCK_COLOR: rgb(143 143 143 / 20%);
+    --AIR_SHADOW: 0px 3px 10px -3px rgb(0 0 0 / 50%);
+
+    --AIR_CONTEXT_SHADOW_COLOR_START: rgb(53 51 61 / 30%);
+    --AIR_CONTEXT_SHADOW_COLOR_END: rgb(6 6 8 / 70%);
+
+    --BLOCK_COLOR: rgb(37 37 37);
+    --BLOCK_COLOR_LITE: rgb(37 37 37 / 60%);
+    --BLOCK_COLOR_LITE_TEXT: rgb(189 189 190);
+    --BLOCK_BLOCK_COLOR: rgb(59 59 59);
+    --BLOCK_BLOCK_COLOR_LITE: rgb(58 58 60 / 60%);
+    --BLOCK_SHADOW: 0px 1px 2px -1px rgb(0 0 0 / 65%);
+
+    --INPUT_COLOR: rgb(55 55 55);
+
+    --BTN_TEXT_COLOR: #dbdbdb;
+    --BTN_BACKGROUND: rgb(55 55 55);
+    --BTN_CLOSE_COLOR: rgb(207 92 92 / 50%);
+
+    --INTERACTION_BTN_COLOR: rgb(61 61 61 / 70%);
+    --INTERACTION_BTN_TEXT_COLOR: rgb(255 255 255 / 70%);
+
+    --GRADIENT: linear-gradient(345deg, #5c375f, #5b5eae) #5c4882;
+    --GRADIENT_SHADOW: 0px 0px 9px -1px rgb(238 186 133 / 72%);
+
+    --TITLE_COLOR: rgb(255 255 255);
+    --TEXT_COLOR: rgb(233 233 233);
+
+    --D_OR_P_COLOR: rgb(191 191 191);
+
+    --REPLY_BG: linear-gradient(465deg, rgb(250, 179, 30, 40%), rgb(253, 147, 71, 40%));
+    --REPLY_SVG_COLOR: rgb(253, 147, 71, 70%);
+}
+
+input[type="text"]::-webkit-input-placeholder, 
+input[type="password"]::-webkit-input-placeholder, 
+textarea::-webkit-input-placeholder {
+    color: rgb(193 192 199);
+}
+
+a {
+    background-image: var(--GOLD_GRADIENT);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Интерфейс */
+
+header {
+    -webkit-box-shadow: 0px 4px 10px -9px rgb(0 0 0);
+    -moz-box-shadow: 0px 4px 10px -9px rgb(0 0 0);
+    box-shadow: 0px 4px 10px -9px rgb(0 0 0);
+}
+
+.Search-Container input {
+    background: var(--AIR_BLOCK_COLOR);
+}
+.Search-Container input:hover, 
+.Search-Container input:focus {
+    outline: 2px solid var(--AIR_BLOCK_COLOR);
+}
+
+.UI-Logo {
+    background-image: url('/static_sys/Images/GoldStar.svg');
+    filter: drop-shadow(0px 0px 4px rgb(253 177 102 / 62%));
+    -webkit-background-clip: unset;
+}
+
+.Icon:not([iid="GOLD"]) path {
+    fill: #fff;
+}
+
+.UI-Blur {
+    background: rgb(0 0 0 / 23%);
+}
+
+.Notifications-NewNotification {
+    background: rgb(43 43 43);
+}
+
+.UI-Switch {
+    background: rgb(76 76 76 / 50%);
+    border: 1px solid rgb(71 71 71 / 50%);
+}
+.UI-Switch-On {
+    background: var(--ACCENT_COLOR);
+    border: 0px solid rgba(255, 255, 255, 0);
+}
+
+.UI-LNB_ACT {
+    background: var(--BLOCK_COLOR);
+    box-shadow: 0px 4px 10px -9px rgb(0 0 0);
+}
+
+
+.UI-Tabs .Tab {
+    color: rgb(145 145 145 / 70%);
+}
+
+.UI-Tabs .ActiveTab {
+    color: var(--BTN_TEXT_COLOR);
+    box-shadow: 0px 0px 3px rgb(40 40 40 / 60%);
+}
+
+.UI-PRELOAD {
+    background: rgb(100 100 100);
+}
+.UI-PRELOAD::after {
+    background: rgb(212 212 212 / 40%);
+}
+
+.UI-PartitionName {
+    color: var(--BLOCK_COLOR_LITE_TEXT);
+}
+
+/* Текстовый инпут */
+
+.UI-Input:hover,
+.UI-Input:focus {
+    outline: 2px solid rgb(62 62 62 / 80%);
+    outline-offset: 2px;
+}
+
+/* Ошибка */
+
+.UI-Window_BG {
+    background: rgb(0 0 0 / 50%);
+}
+
+.UI-E_IMG {
+    filter: contrast(1);
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Статус бар */
+
+.Search-R_Element, .Search-Error, .UI-NavPanel-Btn, .UI-BB_B_SLCT {
+    background: var(--AIR_BLOCK_COLOR);
+}
+
+/* Пост */
+
+.AddPost .Buttons .Send {
+    background: var(--ACCENT_COLOR);
+    box-shadow: var(--GRADIENT_SHADOW);
+    -moz-box-shadow: var(--GRADIENT_SHADOW);
+    -webkit-box-shadow: var(--GRADIENT_SHADOW);
+}
+.AddPost .Buttons .Send:hover {
+    outline: solid 2px rgb(238 186 133 / 72%);
+    outline-offset: 2px;
+}
+
+.Post .InteractionButtons .Liked {
+    background: var(--ACCENT_COLOR);
+    color: #FFF;
+    box-shadow: var(--GRADIENT_SHADOW);
+    -moz-box-shadow: var(--GRADIENT_SHADOW);
+    -webkit-box-shadow: var(--GRADIENT_SHADOW);
+}
+
+.Post .InteractionButtons .Liked svg path {
+    fill: #fff;
+}
+
+.Post .Image {
+    .Censoring, .Blur {
+        background: rgb(0 0 0 / 28%);
+    }
+}
+
+/* Чат */
+
+.Chat {
+    -webkit-box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 50%);
+    -moz-box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 50%);
+    box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 50%);
+}
+
+.Chats-Title {
+    background: rgb(53 53 53 / 85%);
+    border-bottom: var(--BTN_BACKGROUND) 1px solid;
+}
+
+.Chats-User {
+    background: var(--BTN_BACKGROUND);
+}
+
+.Chat-Error_message {
+    background: var(--BTN_BACKGROUND);
+}
+
+.Chat-BottomBar {
+    background: rgb(53 53 53 / 85%);
+    border-top: 1px var(--BTN_BACKGROUND) solid;
+}
+
+.Chat-M_URS {
+    background: var(--BTN_BACKGROUND);
+    color: #FFF;
+}
+
+/* Страница информации */
+
+.Info-API_QT {
+    color: #ffffff;
+}
+
+.Info-BL_R {
+    background: rgb(50 50 50);
+}
+.Info-BL_R_IF {
+    background: rgb(138 131 131 / 30%);
+    border: 1px solid rgb(119 107 107 / 70%);
+}
+
+/* Панель управления */
+
+.Dashboard-Block svg {
+    fill: rgb(84 84 84);
+}
+
+.Dashboard-SK_NA {
+    background: linear-gradient(90deg, var(--BTN_BACKGROUND) 60%, rgb(68 122 60) 100%);
+}
+.Dashboard-SK_A {
+    background: linear-gradient(90deg, var(--BTN_BACKGROUND) 60%, rgb(106 48 48) 100%);
+}
+
+.Dashbaard-BottomBar {
+    background: rgb(43 43 43 / 70%);
+}
+
+/* Настройки */
+
+.Settings-CP_Cover .Settings-ChangeButtons .Button {
+    background: rgb(56 56 56);
+    color: #FFF;
+}
+.Settings-CP_Cover .Settings-ChangeButtons .ButtonDL {
+    color: #FFF;
+}
+
+.Settings-CP_Input_container input, 
+.Settings-CP_Input_container textarea {
+    background: var(--INPUT_COLOR);
+}
+
+.Settings-Q_container {
+    .Back {
+        background: rgb(76 76 76 / 50%);
+    }
+}
+
+/* Музыка */
+
+.Music-FullPlayer_BG_Blur {
+    background: rgb(39 39 39 / 40%);
+}
+.Music-SongPrew .Cover .CoverShadow {
+    filter: blur(10px) brightness(0.6);
+}
+.Music-FullPlayer_C .Controls .Metadata {
+    color: rgb(255 255 255 / 90%);
+}
+.Music-FullPlayer_C .Controls .Metadata .Author {
+    color: rgb(255 255 255 / 80%);
+}
+.Music-FullPlayer_C .Controls .UI-Slider .Progress {
+    background: rgb(255 255 255 / 90%);
+}
+.Music-FullPlayer_C .Controls .Info .Liked svg {
+    fill: rgb(255 255 255 / 90%);
+}
+
+/* Подписка */
+
+.GoldSub-User {
+    background: linear-gradient(114deg, rgb(221 183 127 / 10%) 60%, rgb(112 89 42 / 60%));
+}
+
+.GoldSub-Buttons {
+    .Pay {
+        box-shadow: 0px 0px 9px -1px rgb(147 89 31);
+        -moz-box-shadow: 0px 0px 9px -1px rgb(147 89 31);
+        -webkit-box-shadow: 0px 0px 9px -1px rgb(147 89 31);
+    }
+    .Activate {
+        background: rgb(76 76 76 / 50%);
+    }
+}
+
+/* Анимации */
+
+@keyframes ChatShow {
+    0% {
+        width: 50%;
+        max-width: 400px;
+        -webkit-box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 50%);
+        -moz-box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 50%);
+        box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 50%);
+    }
+    100% {
+        width: 60%;
+        max-width: 600px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+@keyframes ChatHide {
+    0% {
+        width: 60%;
+        max-width: 600px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    100% {
+        width: 50%;
+        max-width: 400px;
+        -webkit-box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 50%);
+        -moz-box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 50%);
+        box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 50%);
+    }
+}
+
+@keyframes AP-FILE_SETTINGS-ACTIVE {
+    100% {
+        background: var(--AIR_COLOR);
+        box-shadow: 0px 0px 10px -3px rgb(0 0 0 / 50%);
+    }
+}
+@keyframes AP-FILE_SETTINGS-NOTACTIVE {
+    0% {
+        background: var(--AIR_COLOR);
+        box-shadow: 0px 0px 10px -3px rgb(0 0 0 / 50%);
+    }
+}
+
+@keyframes IMAGE_VIEW-DARK_BLUR {
+    0% {
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+    }
+    100% {
+        background: rgb(0 0 0 / 70%);
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px);
+    }
+}
+@keyframes IMAGE_VIEW-WHITE_BLUR {
+    0% {
+        background: rgb(0 0 0 / 70%);
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px);
+    }
+    100% {
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+    }
+}
+
+@media only screen and (max-device-width: 768px),
+only screen and (device-width: 768px) and (device-height: 768px),
+only screen and (width: 768px) and (orientation: landscape),
+only screen and (device-width: 768px),
+only screen and (max-width: 768px) {
+
+    .UI-L_NAV button {
+        background: rgb(255 255 255 / 0%);
+    }
+    .UI-LNB_ACT {
+        background: var(--AIR_COLOR);
+    }
+
+}
